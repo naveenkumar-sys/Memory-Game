@@ -48,7 +48,7 @@ const cardsArray = [
     icon: '<i class="fa-solid fa-crow"></i>',
   },
 ];
-const btn=document.getElementById("btn");
+const btn = document.getElementById("btn");
 //creating flipped cards array for which two card flipped
 const flippedCards = [];
 //once all cards are matched after this message should appears so that
@@ -119,7 +119,6 @@ function checkMatch() {
   const card2Id = flippedCards[1].getAttribute("id");
   //if  two cards in flippedArray.name(It should in cardsArray[Id].name)  will same means we wrote the conditon
   if (cardsArray[card1Id].name === cardsArray[card2Id].name) {
-    
     //we remove active because once we found the match it will also clickable so we remove it entire div will remove
     flippedCards[0].classList.remove("active");
     //we remove active because once we found the match it will also clickable so we remove it entire div will remove
@@ -162,11 +161,10 @@ function restartGame() {
   flippedCards.length = 0; // clear flipped array
   matchedPairs = 0; // reset matched count
 
-   gameBoard.classList.remove("won");
+  gameBoard.classList.remove("won");
   gameBoard.classList.add("game");
 
   // Shuffle and re-display the cards
   shuffleCards();
   displayCards();
 }
-
